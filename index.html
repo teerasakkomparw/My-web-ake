@@ -8,50 +8,63 @@
       content="เว็บไซต์โปรไฟล์ Teerasak Komparw พร้อมฉาก 3D movement สร้างด้วย Vite และ Three.js"
     />
     <title>Teerasak Komparw | Facebook Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
-    <canvas id="scene" aria-hidden="true"></canvas>
+    <aside class="side-nav" aria-label="Main navigation">
+      <a class="brand-link" href="#home" aria-label="Go to home">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/atrsk-wide-logo.png" alt="ATRSK" />
+        </span>
+        <span class="brand-text">
+          <strong>Teerasak</strong>
+          <small>Portfolio</small>
+        </span>
+      </a>
+
+      <nav class="nav-menu">
+        <a class="nav-item is-active" href="#home">
+          <i data-lucide="home" aria-hidden="true"></i>
+          <span>Home</span>
+        </a>
+
+        <div class="nav-group">
+          <button class="nav-item nav-toggle" type="button" aria-expanded="true" aria-controls="project-menu">
+            <i data-lucide="folder-kanban" aria-hidden="true"></i>
+            <span>Project</span>
+            <i class="chevron" data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+
+          <ul id="project-menu" class="sub-menu" aria-label="Project filters">
+            <li><a class="sub-item is-selected" href="#project-all">All</a></li>
+            <li><a class="sub-item" href="#project-makan">Makan</a></li>
+            <li><a class="sub-item" href="#project-munista">Munista</a></li>
+            <li><a class="sub-item" href="#project-jobnista">Jobnista</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
 
     <main class="site-shell">
-      <section class="hero" aria-labelledby="profile-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Facebook Profile</p>
-          <h1 id="profile-title">Teerasak Komparw</h1>
-          <p class="lede">
-            โปรไฟล์สาธารณะจาก Facebook พร้อมพื้นที่แนะนำตัวแบบเรียบง่าย
-            เสริมด้วยงานเคลื่อนไหว 3D ที่ให้ความรู้สึกสด มีพลัง และทันสมัย
-          </p>
-          <div class="actions" aria-label="Profile links">
-            <a class="primary-link" href="https://www.facebook.com/teerasak.komparw" target="_blank" rel="noreferrer">
-              เปิด Facebook
-            </a>
-            <a class="secondary-link" href="#profile-info">ดูข้อมูล</a>
+      <section id="home" class="comparison-hero" aria-label="Image reveal">
+        <div class="comparison-stage" data-compare>
+          <img class="comparison-image comparison-color" src="./assets/hero-color.png" alt="" />
+          <div class="comparison-layer" aria-hidden="true">
+            <img class="comparison-image comparison-bw" src="./assets/hero-color.png" alt="" />
+          </div>
+          <div class="comparison-divider" aria-hidden="true">
+            <span class="comparison-handle"></span>
           </div>
         </div>
-
-        <aside class="profile-signal" aria-label="Profile signal">
-          <span class="signal-label">Public Source</span>
-          <strong>facebook.com/teerasak.komparw</strong>
-          <span class="signal-note">ข้อมูลที่แสดงยึดจากลิงก์สาธารณะที่ตรวจสอบได้</span>
-        </aside>
-      </section>
-
-      <section id="profile-info" class="info-grid" aria-label="Profile information">
-        <article class="info-card">
-          <span>ชื่อโปรไฟล์</span>
-          <strong>Teerasak Komparw</strong>
-        </article>
-        <article class="info-card">
-          <span>ช่องทางหลัก</span>
-          <strong>Facebook</strong>
-        </article>
-        <article class="info-card">
-          <span>อัปเดตหน้าเว็บ</span>
-          <strong>28 มิถุนายน 2026</strong>
-        </article>
       </section>
     </main>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
