@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="เว็บไซต์โปรไฟล์ Teerasak Komparw พร้อมฉาก 3D movement สร้างด้วย Vite และ Three.js"
+    />
+    <title>Teerasak Komparw | Facebook Profile</title>
+  </head>
+  <body>
+    <canvas id="scene" aria-hidden="true"></canvas>
+
+    <main class="site-shell">
+      <section class="hero" aria-labelledby="profile-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Facebook Profile</p>
+          <h1 id="profile-title">Teerasak Komparw</h1>
+          <p class="lede">
+            โปรไฟล์สาธารณะจาก Facebook พร้อมพื้นที่แนะนำตัวแบบเรียบง่าย
+            เสริมด้วยงานเคลื่อนไหว 3D ที่ให้ความรู้สึกสด มีพลัง และทันสมัย
+          </p>
+          <div class="actions" aria-label="Profile links">
+            <a class="primary-link" href="https://www.facebook.com/teerasak.komparw" target="_blank" rel="noreferrer">
+              เปิด Facebook
+            </a>
+            <a class="secondary-link" href="#profile-info">ดูข้อมูล</a>
+          </div>
+        </div>
+
+        <aside class="profile-signal" aria-label="Profile signal">
+          <span class="signal-label">Public Source</span>
+          <strong>facebook.com/teerasak.komparw</strong>
+          <span class="signal-note">ข้อมูลที่แสดงยึดจากลิงก์สาธารณะที่ตรวจสอบได้</span>
+        </aside>
+      </section>
+
+      <section id="profile-info" class="info-grid" aria-label="Profile information">
+        <article class="info-card">
+          <span>ชื่อโปรไฟล์</span>
+          <strong>Teerasak Komparw</strong>
+        </article>
+        <article class="info-card">
+          <span>ช่องทางหลัก</span>
+          <strong>Facebook</strong>
+        </article>
+        <article class="info-card">
+          <span>อัปเดตหน้าเว็บ</span>
+          <strong>28 มิถุนายน 2026</strong>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
